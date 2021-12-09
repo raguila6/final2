@@ -30,10 +30,12 @@ const useDB = () => {
            createdAt: new  Date(),
        })
    }
-       const sendBrand = async brandName => {
-        await updateDoc(inventoryCollection, {
-            brand: brandName,
-        })    
+   const sendBrand = async brandName => {
+    await addDoc(inventoryCollection, {
+        brand: brandName,
+        createdAt: new  Date(),
+    }) 
+   
 
    }
 
